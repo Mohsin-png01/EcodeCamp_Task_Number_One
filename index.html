@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipes Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Recipes</h1>
+        <div class="search-cart">
+            <div class="search-container">
+                <input type="text" id="searchBar" placeholder="Search for recipes...">
+                <i class="fas fa-search"></i>
+            </div>
+            <button id="cartButton" class="cart-button">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="recipeList" class="recipe-grid"></section>
+
+        <section id="recipeDetail" class="recipe-detail" style="display: none;">
+            <button id="backButton" class="back-button"><i class="fas fa-arrow-left"></i> Back to Recipes</button>
+            <h2 id="recipeTitle"></h2>
+            <div class="recipe-rating">
+                <span id="recipeRating"></span>
+                <i class="fas fa-star"></i>
+            </div>
+            <img id="recipeImage" alt="Recipe Image">
+            <div class="recipe-content">
+                <div class="ingredients">
+                    <h3>Ingredients:</h3>
+                    <ul id="recipeIngredients"></ul>
+                </div>
+                <div class="instructions">
+                    <h3>Instructions:</h3>
+                    <ol id="recipeInstructions"></ol>
+                </div>
+            </div>
+            <button id="addToCartButton" class="add-to-cart-button">Add to Cart</button>
+        </section>
+
+        <section id="cart" class="cart" style="display: none;">
+            <h2>Shopping Cart</h2>
+            <ul id="cartList"></ul>
+            <p id="cartTotal">Total: $0.00</p>
+            <button id="checkoutButton" class="checkout-button">Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gourmet Recipes. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
